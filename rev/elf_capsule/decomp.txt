@@ -1,0 +1,352 @@
+loc_80100000: addi            sp, sp, -90h
+loc_80100004: sd              s0, 88h+var_s0(sp)
+loc_80100008: addi            s0, sp, 88h+arg_0
+loc_80100010: la              a4, aWhatIsTheFlag# "What is the flag?"
+loc_80100018: print a4
+loc_80100024: li              a4, 1
+loc_80100028: push a4
+loc_80100034: li              a4, 2
+loc_80100038: push a4
+loc_80100044: pop a4
+loc_80100048: li              a5, 2
+loc_8010004c: bne             a4, a5, loc_80100064
+
+
+loc_80100058: pop a4
+loc_8010005c: li              a5, 1
+loc_80100060: beq             a4, a5, loc_80100078
+
+
+loc_80100068: la              a4, aWrong# "Wrong"
+loc_80100070: print a4
+loc_80100074: j               loc_801009D0
+
+
+loc_80100078: nop
+loc_8010007c: sd              zero, -8+var_10(s0)
+loc_80100084: li              a4, 15
+loc_80100088: push_call_1
+loc_80100094: ld              a4, -8+var_10(s0)
+loc_80100098: push a4
+loc_801000a4: la              a4, qword_80101028
+loc_801000ac: ld              a4, (qword_80101028 - 80101028h)(a4)
+loc_801000b0: push a4
+loc_801000c4: a4 = stack[-2] * stack[-1]
+loc_801000c8: push a4
+loc_801000d4: li              a4, 7
+loc_801000d8: stack[-1] rol= a4
+loc_801000e0: lui             a4, 28EC7h
+loc_801000e4: slli            a4, a4, 2
+loc_801000e8: addi            a4, a4, 2D3h
+loc_801000ec: stack[-1] ^= a4
+loc_801000f8: la              a4, qword_80101030
+loc_80100100: ld              a4, (qword_80101030 - 80101030h)(a4)
+loc_80100104: stack[-1] += a4
+loc_80100110: pop a4
+loc_80100114: sd              a5, -8+var_18(s0)
+loc_80100120: ld              a4, -8+var_18(s0)
+loc_80100124: push a4
+loc_80100130: ld              a4, -8+var_18(s0)
+loc_80100134: push a4
+loc_80100140: li              a4, 2135587861
+loc_80100148: push a4
+loc_8010015c: a4 = stack[-2] + stack[-1]
+loc_80100160: push a4
+loc_8010016c: li              a4, 1859775393
+loc_80100174: stack[-1] *= a4
+loc_80100180: li              a4, 11
+loc_80100184: stack[-1] rol= a4
+loc_80100194: a4 = stack[-2] ^ stack[-1]
+loc_80100198: push a4
+loc_801001a4: lui             a4, 13C6Fh
+loc_801001a8: slli            a4, a4, 3
+loc_801001ac: addi            a4, a4, -647h
+loc_801001b0: push a4
+loc_801001bc: li              a4, 3
+loc_801001c0: stack[-1] rol= a4
+loc_801001cc: pop a4
+loc_801001d0: sd              a5, -8+var_18(s0)
+loc_801001dc: ld              a4, -8+var_18(s0)
+loc_801001e0: push a4
+loc_801001ec: ld              a4, -8+var_18(s0)
+loc_801001f0: push a4
+loc_80100204: a4 = stack[-2] + stack[-1]
+loc_80100208: push a4
+loc_80100214: lui             a4, 37AB7h
+loc_80100218: slli            a4, a4, 2
+loc_8010021c: addi            a4, a4, -111h
+loc_80100220: push a4
+loc_80100230: a4 = stack[-2] ^ stack[-1]
+loc_80100234: push a4
+loc_80100240: li              a4, 5
+loc_80100244: stack[-1] rol= a4
+loc_80100250: lui             a4, 16A53h
+loc_80100254: slli            a4, a4, 3
+loc_80100258: addi            a4, a4, -5B3h
+loc_8010025c: stack[-1] *= a4
+loc_80100268: li              a4, 1051962371
+loc_80100270: slli            a4, a4, 2
+loc_80100274: stack[-1] += a4
+loc_80100280: li              a4, 13
+loc_80100284: stack[-1] rol= a4
+loc_80100294: a4 = stack[-2] ^ stack[-1]
+loc_80100298: push a4
+loc_8010029c: ld              a5, -8+var_10(s0)
+loc_801002a0: addi            a5, a5, 1
+loc_801002a4: sd              a5, -8+var_10(s0)
+loc_801002ac: pop_call_1
+loc_801002b0: sd              a5, -8+var_20(s0)
+loc_801002bc: push a4
+loc_801002c4: li              a4, 2
+loc_801002c8: push_call_1
+loc_801002d0: li              a4, 1
+loc_801002d4: push_call_2
+loc_801002dc: li              a4, 1
+loc_801002e0: push_call_3
+loc_801002ec: li              a4, 6
+loc_801002f0: stack[-1] += a4
+loc_801002f8: pop_call_3
+loc_801002fc: sd              a5, -8+var_28(s0)
+loc_80100304: pop_call_2
+loc_80100308: sd              a5, -8+var_30(s0)
+loc_80100310: pop_call_1
+loc_80100314: sd              a5, -8+var_38(s0)
+loc_80100320: li              a4, 8
+loc_80100324: stack[-1] += a4
+loc_80100334: pop a4
+loc_80100338: push_call_1
+loc_80100340: getchar a4
+loc_80100344: sb              a5, -8+var_39(s0)
+loc_80100348: lbu             a5, -8+var_39(s0)
+loc_8010034c: andi            a4, a5, 0FFh
+loc_80100350: li              a5, 10
+loc_80100354: beq             a4, a5, loc_801003C4
+
+
+loc_80100360: lbu             a4, -8+var_39(s0)
+loc_80100364: push a4
+loc_80100370: li              a4, -1
+loc_80100374: push a4
+loc_80100384: a4 = stack[-2] ^ stack[-1]
+loc_80100388: push a4
+loc_80100394: li              a4, 1
+loc_80100398: stack[-1] += a4
+loc_801003a4: pop a4
+loc_801003ac: andi            a4, a4, 0FFh
+loc_801003b0: encrypt a4
+loc_801003b8: pop_call_1
+loc_801003bc: sd              a5, -8+var_48(s0)
+loc_801003c0: j               loc_801003C8
+
+
+loc_801003c4: nop
+loc_801003c8: li              a5, 1
+loc_801003cc: sd              a5, -8+var_50(s0)
+loc_801003d4: li              a4, 6
+loc_801003d8: push_call_1
+loc_801003e4: ld              a4, -8+var_50(s0)
+loc_801003e8: push a4
+loc_801003f4: ld              a4, -8+var_50(s0)
+loc_801003f8: stack[-1] *= a4
+loc_8010040c: a4 = rol stack[-2] stack[-1]
+loc_80100410: push a4
+loc_8010041c: ld              a4, -8+var_50(s0)
+loc_80100420: push a4
+loc_8010042c: li              a4, 1
+loc_80100430: stack[-1] += a4
+loc_8010043c: pop a4
+loc_80100440: sd              a5, -8+var_50(s0)
+loc_80100448: la              a4, qword_80101038
+loc_80100450: ld              a4, (qword_80101038 - 80101038h)(a4)
+loc_80100454: stack[-1] ^= a4
+loc_80100460: pop a4
+loc_80100464: sd              a5, -8+var_58(s0)
+loc_80100470: pop a4
+loc_80100474: sd              a5, -8+var_60(s0)
+loc_80100480: li              a4, 3
+loc_80100484: push a4
+loc_80100490: ld              a4, -8+var_58(s0)
+loc_80100494: push a4
+loc_8010049c: ld              a4, -8+var_60(s0)
+loc_801004a0: stack[-1] ^= a4
+loc_801004b4: a4 = stack[-2] + stack[-1]
+loc_801004b8: push a4
+loc_801004c4: li              a4, -1
+loc_801004c8: push a4
+loc_801004d0: ld              a4, -8+var_58(s0)
+loc_801004d4: stack[-1] ^= a4
+loc_801004e0: li              a4, -1
+loc_801004e4: push a4
+loc_801004ec: ld              a4, -8+var_60(s0)
+loc_801004f0: stack[-1] ^= a4
+loc_80100504: a4 = stack[-2] | stack[-1]
+loc_80100508: push a4
+loc_80100514: li              a4, 3
+loc_80100518: push a4
+loc_8010052c: a4 = stack[-2] * stack[-1]
+loc_80100530: push a4
+loc_80100544: a4 = stack[-2] + stack[-1]
+loc_80100548: push a4
+loc_80100554: li              a4, -1
+loc_80100558: push a4
+loc_80100560: ld              a4, -8+var_58(s0)
+loc_80100564: stack[-1] ^= a4
+loc_80100570: li              a4, -1
+loc_80100574: push a4
+loc_8010057c: ld              a4, -8+var_60(s0)
+loc_80100580: stack[-1] ^= a4
+loc_80100594: a4 = stack[-2] | stack[-1]
+loc_80100598: push a4
+loc_801005a0: li              a4, -1
+loc_801005a4: stack[-1] ^= a4
+loc_801005b0: li              a4, 5
+loc_801005b4: push a4
+loc_801005c8: a4 = stack[-2] * stack[-1]
+loc_801005cc: push a4
+loc_801005e0: a4 = stack[-2] + stack[-1]
+loc_801005e4: push a4
+loc_801005ec: pop_call_1
+loc_801005f0: sd              a5, -8+var_68(s0)
+loc_801005fc: pop a4
+loc_80100600: la              a5, qword_80101040
+loc_80100608: ld              a5, (qword_80101040 - 80101040h)(a5)
+loc_8010060c: beq             a4, a5, loc_80100634
+
+
+loc_80100614: la              a4, aWrong# "Wrong"
+loc_8010061c: print a4
+loc_8010062c: pop a4
+loc_80100630: exit
+
+
+loc_80100634: li              a5, 4
+loc_80100638: sd              a5, -8+var_70(s0)
+loc_80100640: li              a4, 1
+loc_80100644: push_call_2
+loc_8010064c: ld              a4, -8+var_70(s0)
+loc_80100650: push_call_1
+loc_8010065c: ld              a4, -8+var_50(s0)
+loc_80100660: push a4
+loc_8010066c: ld              a4, -8+var_50(s0)
+loc_80100670: stack[-1] *= a4
+loc_80100684: a4 = rol stack[-2] stack[-1]
+loc_80100688: push a4
+loc_80100694: ld              a4, -8+var_50(s0)
+loc_80100698: push a4
+loc_801006a4: li              a4, 1
+loc_801006a8: stack[-1] += a4
+loc_801006b4: pop a4
+loc_801006b8: sd              a5, -8+var_50(s0)
+loc_801006c0: la              a4, qword_80101038
+loc_801006c8: ld              a4, (qword_80101038 - 80101038h)(a4)
+loc_801006cc: stack[-1] ^= a4
+loc_801006d8: pop a4
+loc_801006dc: sd              a5, -8+var_58(s0)
+loc_801006e8: pop a4
+loc_801006ec: sd              a5, -8+var_60(s0)
+loc_801006f8: ld              a4, -8+var_60(s0)
+loc_801006fc: push a4
+loc_80100708: li              a4, 1
+loc_8010070c: push a4
+loc_80100718: ld              a4, -8+var_60(s0)
+loc_8010071c: push a4
+loc_80100728: li              a4, -1
+loc_8010072c: push a4
+loc_8010073c: a4 = stack[-2] ^ stack[-1]
+loc_80100740: push a4
+loc_80100754: a4 = stack[-2] + stack[-1]
+loc_80100758: push a4
+loc_80100764: ld              a4, -8+var_58(s0)
+loc_80100768: stack[-1] += a4
+loc_80100778: a4 = stack[-2] ^ stack[-1]
+loc_8010077c: push a4
+loc_80100784: ld              a4, -8+var_60(s0)
+loc_80100788: stack[-1] ^= a4
+loc_80100790: pop_call_1
+loc_80100794: sd              a5, -8+var_78(s0)
+loc_801007a0: pop a4
+loc_801007a4: sd              a5, -8+var_80(s0)
+loc_801007a8: ld              a4, -8+var_80(s0)
+loc_801007ac: la              a5, qword_80101048
+loc_801007b4: ld              a5, (qword_80101048 - 80101048h)(a5)
+loc_801007b8: bne             a4, a5, loc_801007E4
+
+
+loc_801007c4: ld              a4, -8+var_80(s0)
+loc_801007c8: push a4
+loc_801007cc: li              a5, 1
+loc_801007d0: sd              a5, -8+var_70(s0)
+loc_801007d8: pop_call_2
+loc_801007dc: sd              a5, -8+var_88(s0)
+loc_801007e0: j               loc_80100844
+
+
+loc_801007e4: ld              a4, -8+var_80(s0)
+loc_801007e8: la              a5, qword_80101050
+loc_801007f0: ld              a5, (qword_80101050 - 80101050h)(a5)
+loc_801007f4: bne             a4, a5, loc_80100820
+
+
+loc_801007fc: la              a4, aCorrect# "Correct"
+loc_80100804: print a4
+loc_80100814: pop a4
+loc_80100818: unknown_1973
+loc_8010081c: j               loc_80100844
+
+
+loc_80100824: la              a4, aWrong# "Wrong"
+loc_8010082c: print a4
+loc_8010083c: pop a4
+loc_80100840: unknown_404
+loc_80100848: li              a4, 991469
+loc_80100850: push_call_1
+loc_80100858: li              a4, 692549
+loc_80100860: push_call_3
+loc_80100868: li              a4, 823212
+loc_80100870: push_call_2
+loc_8010087c: li              a4, 31815
+loc_80100884: push a4
+loc_80100890: li              a4, 26492
+loc_80100898: push a4
+loc_801008a4: li              a4, 815730
+loc_801008ac: push a4
+loc_801008b8: li              a4, 469207
+loc_801008c0: stack[-1] rol= a4
+loc_801008c8: li              a4, 330825
+loc_801008d0: stack[-1] ^= a4
+loc_801008dc: li              a4, 66912
+loc_801008e4: stack[-1] += a4
+loc_801008f0: li              a4, 858794
+loc_801008f8: stack[-1] *= a4
+loc_80100904: li              a4, 329986
+loc_8010090c: push a4
+loc_80100918: li              a4, 67744
+loc_80100920: push a4
+loc_8010092c: li              a4, 24871
+loc_80100934: stack[-1] *= a4
+loc_8010093c: li              a4, 50
+loc_80100940: encrypt a4
+loc_80100948: li              a4, 155059
+loc_80100950: print a4
+loc_80100960: pop_call_2
+loc_80100964: push a4
+loc_80100974: pop_call_3
+loc_80100978: push a4
+loc_80100988: pop_call_1
+loc_8010098c: push a4
+loc_80100998: pop a4
+loc_8010099c: la              a5, qword_80101058
+loc_801009a4: ld              a5, (qword_80101058 - 80101058h)(a5)
+loc_801009a8: bne             a4, a5, loc_801009C0
+
+
+loc_801009b0: la              a4, aCorrect# "Correct"
+loc_801009b8: print a4
+loc_801009bc: j               loc_801009D0
+
+
+loc_801009c4: la              a4, aWrong# "Wrong"
+loc_801009cc: print a4
+loc_801009d0: ld              s0, 88h+var_s0(sp)
+loc_801009d4: addi            sp, sp, 90h
+loc_801009d8: ret
